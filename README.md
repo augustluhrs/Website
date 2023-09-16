@@ -12,16 +12,18 @@
 
 ### Basics
 
-- [ ] Set up repo and basic server architecture
+- [X] Set up repo and basic server architecture
 - [X] Yarn instead of npm
 - [X] LFS init
 - [ ] Home Page
 - [ ] Glitch Project Import
+- [ ] Next.js setup and config
 
 ### Research // Planning
 
 - [ ] Update TODO from Notion page
-- [ ] Worth doing react? react-p5 basic?
+- [X] Worth doing react? react-p5 basic? next-js?
+- [X] webpack/parcel/rollup/vite research
 - [ ] CMS potential problems
 - [ ] LFS storage limit
 - [ ] Domain transfer
@@ -49,5 +51,9 @@
 - express
 - p5
 - socket.io
+
+### Research Links
+
+- [Jamstack Community Survey](https://jamstack.org/survey/2022/)
 
 ### Credits // Inspiration
