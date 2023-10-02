@@ -16,17 +16,12 @@ let server = require('http').createServer(app).listen(port, function(){
 //where we look for files
 app.use(express.static('public'));
 
+//
+// SOCKET.IO
+//
+
 //create socket connection
 let io = require('socket.io')(server);
-
-//
-// GAME VARIABLES
-//
-
-
-//
-// SERVER EVENTS
-//
 
 //clients
 var inputs = io.of('/')
@@ -34,12 +29,46 @@ var inputs = io.of('/')
 inputs.on('connection', (socket) => {
   console.log('new input client!: ' + socket.id);
 
+  db.test.insert({socketID: socket.id}, function (err, newDoc){
+    if (err) {
+      console.log("client connect db err: " + err);
+    } else {
+      console.log("client connect insert: " + newDoc);
+    }
+  });
+
   //listen for this client to disconnect
   socket.on('disconnect', () => {
     console.log('input client disconnected: ' + socket.id);
   });
 
 });
+
+//
+// NEDB
+//
+
+const Datastore = require('nedb');
+let db = {};
+db.test = new Datastore({filename: "public/db/test.db", autoload: true});
+
+//
+// SERVER EVENTS
+//
+
+init();
+
+function init(){
+  console.log("server init");
+  db.test.find({}, function (err, docs) {
+    if (err) {
+      console.log("init find err: " + err);
+    } else {
+      console.log(docs);
+    }
+  });
+}
+
 
 //
 // FUNCTIONS

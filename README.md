@@ -17,21 +17,28 @@
 - [X] LFS init
 - [ ] Home Page
 - [ ] Glitch Project Import
-- [ ] Next.js setup and config
+- ~~[ ] Next.js setup and config~~
 
 ### Research // Planning
 
 - [ ] Update TODO from Notion page
 - [X] Worth doing react? react-p5 basic? next-js?
 - [X] webpack/parcel/rollup/vite research
+- [ ] Pixi.js
+- [ ] D3.js
 - [ ] CMS potential problems
 - [ ] LFS storage limit
 - [ ] Domain transfer
+- [ ] Better UI than p5
 
 ### Sections // Modes
 
 - [ ] Toggle Toolbar
 - [ ] Pointer Flocking
+- [ ] Garden/Ecosystem Guestbook
+- [ ] Thumbnail Animations
+- [ ] Node Web of Projects by theme
+- [ ] Random Page
 
 ### Social Media
 
@@ -42,7 +49,7 @@
 
 ### Old Site
 
-- [ ] Under Construction Banner
+- [X] Under Construction Banner
 
 ## Resources
 
@@ -55,5 +62,10 @@
 ### Research Links
 
 - [Jamstack Community Survey](https://jamstack.org/survey/2022/)
+- [p5 --> Pixi for GPU Rendering](http://crispysmokedweb.com/2018/07/p5-gpu-pixi-js/)
 
-### Credits // Inspiration
+### Inspiration
+
+[MSHR](https://mshr.info/)
+
+### Credits
