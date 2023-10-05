@@ -18,6 +18,11 @@
 - [ ] Home Page
 - [ ] Glitch Project Import
 - ~~[ ] Next.js setup and config~~
+- [ ] convert to p5 embeds
+- [X] font
+- [ ] design guidelines
+  - [ ] font size
+  - [ ] scaling scales for font and placement
 
 ### Research // Planning
 

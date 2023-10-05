@@ -54,7 +54,7 @@ let font; // the custom font
 function preload() {
   pointer = loadImage("assets/images/pointer.png");
   clouds = loadImage("assets/images/clouds.jpg");
-  // font = loadFont("assets/fonts/MochiyPopOne-Regular.ttf");
+  font = loadFont("assets/fonts/DaysOne-Regular.ttf");
 }
 
 
@@ -68,7 +68,7 @@ function setup(){
   //layout
   imageMode(CENTER); //draws the image from center coordinates instead of corner
   textAlign(CENTER, BOTTOM); //aligns the text to the center horizontally, and to the bottom vertically
-  // textFont(font);
+  textFont(font);
   noStroke();//removes the outline so the text isn't as thick
   colorMode(HSB);
 
@@ -163,6 +163,15 @@ function draw() {
   text("MOUSE SEEK", ((width/sliders.length)*5)+(sliderWidth/4)+(sliderWidth/2), height - (height/13));
   text("FLOCK SIZE", ((width/sliders.length)*6)+(sliderWidth/4)+(sliderWidth/2), height - (height/13));
   text("TRAIL FADE", ((width/sliders.length)*7)+(sliderWidth/4)+(sliderWidth/2), height - (height/13));
+  pop();
+
+  push();
+  textSize(48);
+  text("August Lührs", width/2, height/32 * 2);
+  textSize(24);
+  text("this is my new font", width/2, height/32 * 3);
+  textSize(12);
+  text("I'm so tired", width/2, height/32 * 4);
   pop();
 }
 
