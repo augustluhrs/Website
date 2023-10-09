@@ -44,6 +44,7 @@
 - [ ] Thumbnail Animations
 - [ ] Node Web of Projects by theme
 - [ ] Random Page
+- [ ] Landing Page Desert with Name
 
 ### Social Media
 

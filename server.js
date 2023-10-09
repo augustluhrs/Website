@@ -6,10 +6,12 @@
 
 //create server
 let port = process.env.PORT || 8000;
-let express = require('express');
-const e = require('express');
+// let express = require('express');
+import express from 'express';
+// const e = express;
 let app = express();
-let server = require('http').createServer(app).listen(port, function(){
+import http from 'http';
+let server = http.createServer(app).listen(port, function(){
   console.log('Server is listening at port: ', port);
 });
 
@@ -21,7 +23,11 @@ app.use(express.static('public'));
 //
 
 //create socket connection
-let io = require('socket.io')(server);
+import { Server } from 'socket.io';
+let io = new Server(server);
+// let io = require('socket.io')(server);
+
+
 
 //clients
 var inputs = io.of('/')
@@ -48,7 +54,8 @@ inputs.on('connection', (socket) => {
 // NEDB
 //
 
-const Datastore = require('nedb');
+// const Datastore = require('nedb');
+import Datastore from 'nedb';
 let db = {};
 db.test = new Datastore({filename: "public/db/test.db", autoload: true});
 
